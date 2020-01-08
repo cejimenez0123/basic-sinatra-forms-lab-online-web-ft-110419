@@ -5,8 +5,8 @@ class App < Sinatra::Base
     erb :newteam
   end
   post '/team' do
+    @new_team = params.map{|k,v| v}
     erb :team
-    @name
   end
 
 end
