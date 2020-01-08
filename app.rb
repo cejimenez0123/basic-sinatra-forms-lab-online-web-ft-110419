@@ -5,7 +5,13 @@ class App < Sinatra::Base
     erb :newteam
   end
   post '/team' do
-    @new_team = params.map{|k,v| v}
+    @name = params[:name]
+    @coach = params[:coach]
+    @pg = params[:pg]
+    @sg = params[:sg]
+    @pf = params[:pf]
+    @sf = params[:sf]
+    @c = params[:c]
     erb :team
   end
 
